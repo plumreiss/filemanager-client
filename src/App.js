@@ -28,7 +28,7 @@ function App() {
                 : "An unexpected error occurred"}
             </Alert>
           )}
-          {state.isLoading && <Spinner />}
+          {state.isLoading && <Spinner data-testid="spinner" />}
           {state.files.length > 0 && <BaseTable files={state.files} />}
         </Row>
       </Container>

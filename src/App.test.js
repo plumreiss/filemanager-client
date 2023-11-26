@@ -15,7 +15,6 @@ jest.mock("react-redux", () => ({
 describe("<App / >", () => {
   it("should be able to render files row", () => {
     const mockDispatch = jest.fn();
-
     useDispatch.mockReturnValue(mockDispatch);
     const initialState = {
       files: {
@@ -48,5 +47,28 @@ describe("<App / >", () => {
     component.getByText("b53f24e6812e8a1d74bcc9159cfb8c19");
 
     expect(component.container).toMatchSnapshot();
+  });
+
+  it("should be able to render loading spinner", () => {
+    const mockDispatch = jest.fn();
+    useDispatch.mockReturnValue(mockDispatch);
+    const initialState = {
+      files: {
+        error: "",
+        isLoading: true,
+        files: [],
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    const spinnerElement = getByTestId("spinner");
+    expect(spinnerElement).toBeInTheDocument();
+    expect(spinnerElement).toHaveClass("spinner-border");
   });
 });
