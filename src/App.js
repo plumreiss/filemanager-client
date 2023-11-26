@@ -21,8 +21,6 @@ function App() {
     errorMessage = "No files found";
   } else if (state.error === "Request failed with status code 403") {
     errorMessage = "File is not correctly formatted";
-  } else {
-    errorMessage = "An unexpected error occurred";
   }
 
   return (
