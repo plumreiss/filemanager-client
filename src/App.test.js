@@ -78,7 +78,7 @@ describe("<App / >", () => {
     const initialState = {
       files: {
         error: "Request failed with status code 404",
-        isLoading: true,
+        isLoading: false,
         files: [],
       },
     };
