@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   error: "",
@@ -39,5 +39,4 @@ export const fileSlice = createSlice({
   },
 });
 
-export const { addFiles } = fileSlice.actions;
 export default fileSlice.reducer;
