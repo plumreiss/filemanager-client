@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Should render correctly 1`] = `
+<div>
+  <header
+    class="container-fluid"
+  >
+    <div
+      class="py-1 text-white row"
+      style="background: rgb(255, 102, 102);"
+    >
+      <h1>
+        React Test App
+      </h1>
+    </div>
+  </header>
+</div>
+`;

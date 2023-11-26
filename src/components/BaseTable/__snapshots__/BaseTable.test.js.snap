@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BaseTable /> Should render correctly 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            File Name
+          </th>
+          <th>
+            Text
+          </th>
+          <th>
+            Number
+          </th>
+          <th>
+            Hex
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            test2.csv
+          </td>
+          <td>
+            uzUVbPfNKGawHWZHeqiO
+          </td>
+          <td>
+            777459
+          </td>
+          <td>
+            1ec4c6a048194c9b72fad4b0273f2533
+          </td>
+        </tr>
+        <tr>
+          <td>
+            test2.csv
+          </td>
+          <td>
+            angel
+          </td>
+          <td>
+            888
+          </td>
+          <td>
+            4f9e5d1c3a7b2eca8fb3456789012345
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
