@@ -71,4 +71,26 @@ describe("<App / >", () => {
     expect(spinnerElement).toBeInTheDocument();
     expect(spinnerElement).toHaveClass("spinner-border");
   });
+
+  it("should be able to render that file not found", () => {
+    const mockDispatch = jest.fn();
+    useDispatch.mockReturnValue(mockDispatch);
+    const initialState = {
+      files: {
+        error: "Request failed with status code 404",
+        isLoading: true,
+        files: [],
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const component = render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+
+    expect(component.container).toHaveTextContent("File not found");
+  });
 });
